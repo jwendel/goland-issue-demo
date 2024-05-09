@@ -1,0 +1,114 @@
+{{ define "demo" }}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Demo page!</title>
+        <link rel="stylesheet" type="text/css" href="/demo.css?{{.Header.DateVersion}}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="Description"
+              content="Demo page!">
+        <script defer src="/web/client/generated/script.js?{{.Header.DateVersion}}"></script>
+        <script>let GEN_TIME = {{.Header.PageGenerationTime}};</script>
+    </head>
+
+    <body>
+    <div class="container py-3 text-nowrap">
+        <main>
+
+            <h2>Stats</h2>
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-3">
+                    <div class="btn-group text-center" role="group"
+                         aria-label="Basic radio toggle button group">
+                        <div>Selection</div>
+
+                        <div class="dropdown">
+                            <button id="dc-button" class="btn btn-primary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                Select something
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                                <li><a class="dropdown-item" >Item Item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="btn-group text-center" role="group"
+                         aria-label="Basic radio toggle button group">
+                        <div>Time Window</div>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio-4h" value="4"
+                               autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio-4h">4 Hours</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio-1d" value="24"
+                               autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio-1d">1 Day</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio-7d" value="168"
+                               autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio-7d">7 Days</label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Global Services</h5>
+                        <div class="card-body">
+                            <canvas id="asdf" style="height: 250px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Latency and PacketLoss</h5>
+                        <div class="card-body">
+                            <canvas id="asdf" style="height: 250px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Server Statuses</h5>
+                        <div class="card-body">
+                            <canvas id="asdf" style="height: 250px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    </body>
+    </html>
+{{ end }}
